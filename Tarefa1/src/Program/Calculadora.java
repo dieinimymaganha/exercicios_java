@@ -4,11 +4,19 @@ public class Calculadora {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Calcula area Retangulo = " + calculaAreaRetangulo(5.0,10.0));
+		System.out.println("Calcula area Retangulo = " + calculaAreaRetangulo(-5.0,10.0));
 		System.out.println("Calcula a Area = " + calculaAreaCircunferencia(5.0));
 	}
 	
 	public static double calculaAreaRetangulo(double lado1, double lado2) {
+		
+		if (lado1 < 0) {
+			return lado1 = 0.0;
+		}
+		else if (lado2 < 0) {
+			return lado2 = 0.0;
+		}
+		
 		return  lado1 * lado2;
 	}
 	
