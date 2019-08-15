@@ -1,6 +1,8 @@
 package Test;
 
-import org.junit.Assert;
+import static org.junit.Assert.fail;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;
 
@@ -10,21 +12,91 @@ public class TestCalculadora {
 	
 	@Test
 	public void testaRetangulo() {
-		double a;
+		double result;
 		
 		// Testando se a conta está correta
-		a = Calculadora.calculaAreaRetangulo(5.0, 10.0);
-		Assert.assertEquals(50.0, a, 50.0);
+		result = Calculadora.calculaAreaRetangulo(5.0, 10.0);
+		assertEquals(50.0, result);
+	}
+	
+	@Test
+	public void testaRetanguloNegativo() {
+		double result;
 		
-		// Caso o lado2 seja negativo incluo o valor zero
-		a = Calculadora.calculaAreaRetangulo(-5.0, 10.0);
-		Assert.assertEquals(0.0, a, 0.0);
-
-		// Caso o lado2 seja negativo incluo o valor zero		
-		a = Calculadora.calculaAreaRetangulo(5.0, -10.0);
-		Assert.assertEquals(0.0, a, 0.0);
+		// Testando lado1
+		try {
+			result = Calculadora.calculaAreaRetangulo(-5.0, 10.0);
+			fail("Levantar Exceção");
+		}catch (Exception e) {
+			String message =  e.getMessage();
+			assertEquals("Numero negativo", message);
+		}
+		
+		// Testando lado2
+		try {
+			result = Calculadora.calculaAreaRetangulo(5.0, -10.0);
+			fail("Levantar Exceção");
+		}catch (Exception e) {
+			String message =  e.getMessage();
+			assertEquals("Numero negativo", message);
+		}		
 		
 	}
 	
+	@Test
+	public void testaAreaCircunferencia() {
+		// Testando se a conta está correta
+		double result;
+		
+		result = Calculadora.calculaAreaCircunferencia(5.0);
+		assertEquals(78.53999999999999, result);
+	}
+	
+	@Test
+	public void testaAreaCircunferenciaNegativo() {
+		double result;
+		
+		// Testando lado1
+		try {
+			result = Calculadora.calculaAreaCircunferencia(-5.0);
+			fail("Levantar Exceção");
+		}catch (Exception e) {
+			String message =  e.getMessage();
+			assertEquals("Numero negativo", message);
+		}
+	
+	}
+	
+	@Test
+	public void testaAreaTriangulo() {
+		// Testando se a conta está correta
+		double result;
+		result = Calculadora.calculaAreaTriangulo(5.0, 10.0);
+		assertEquals(25.0, result);
+		
+	}
+	
+	@Test
+	public void testaAreaTrianguloNegativo() {
+		double result;
+		
+		// Testando base negativa
+		try {
+			result = Calculadora.calculaAreaTriangulo(-5.0,10.0);
+			fail("Levantar Exceção");
+		}catch (Exception e) {
+			String message =  e.getMessage();
+			assertEquals("Numero negativo", message);
+		}
+		// Testando area negativa
+		try {
+			result = Calculadora.calculaAreaTriangulo(5.0,-10.0);
+			fail("Levantar Exceção");
+		}catch (Exception e) {
+			String message =  e.getMessage();
+			assertEquals("Numero negativo", message);
+		}
+		
+	}
 
 }

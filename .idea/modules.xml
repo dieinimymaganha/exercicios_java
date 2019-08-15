@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/A01_introducao_sintaxe/A01_introducao_sintaxe.iml" filepath="$PROJECT_DIR$/A01_introducao_sintaxe/A01_introducao_sintaxe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/A02_oo_i/A02_oo_i.iml" filepath="$PROJECT_DIR$/A02_oo_i/A02_oo_i.iml" />
+      <module fileurl="file://$PROJECT_DIR$/A04_jdbc/A04_jdbc.iml" filepath="$PROJECT_DIR$/A04_jdbc/A04_jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AprendendoJUnit/AprendendoJUnit.iml" filepath="$PROJECT_DIR$/AprendendoJUnit/AprendendoJUnit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SistemaRH2/SistemaRH2.iml" filepath="$PROJECT_DIR$/SistemaRH2/SistemaRH2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tarefa1/Tarefa1.iml" filepath="$PROJECT_DIR$/Tarefa1/Tarefa1.iml" />
+    </modules>
+  </component>
+</project>
